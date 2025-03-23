@@ -1,4 +1,4 @@
-# Welcome to React Router with Bun and Hono Server!
+# Welcome to React Router with Bun and Hono Server
 
 [![Remix](https://img.shields.io/badge/Remix-000?logo=remix&logoColor=fff)](https://remix.run/)
 [![React Router](https://img.shields.io/badge/-React%20Router-CA4245?style=flat&logo=reactrouter&logoColor=white)](https://reactrouter.com/)
@@ -11,9 +11,12 @@
 [![Biome](https://img.shields.io/badge/-Biome-60A5FA?style=flat&logo=biome&logoColor=white)](https://biomejs.dev)
 [![Docker](https://img.shields.io/badge/-Docker-2496ED?style=flat&logo=docker&logoColor=white)](https://www.docker.com/)
 
-A modern, production-ready template for building full-stack React applications using React Router with Bun and Hono.
+A modern, production-ready full-stack React applications using React Router with Bun and Hono.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/jpcpereira93/react-router-bun-hono-template/tree/main/default)
+This project stack is inspired by:
+
+- [react-router-bun-hono-template](https://github.com/jpcpereira93/react-router-bun-hono-template/tree/main)
+- [react-router-hono-server](https://github.com/rphlmr/react-router-hono-server/tree/main)
 
 ## Features
 
@@ -28,14 +31,6 @@ A modern, production-ready template for building full-stack React applications u
 - 🔍 BiomeJS for code linting & formatting
 
 ## Getting Started
-
-### Prerequisites
-
-This template uses [bun](https://bun.sh/) as the package manager and Javascript Runtime. So, you need to install `bun` globally:
-
-  ```bash
-  curl -fsSL https://bun.sh/install | bash
-  ```
 
 ### Installation
 
@@ -135,9 +130,5 @@ To watch and re-run tests on file changes during development:
 ```bash
 bun run test:watch
 ```
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
 
 ---
