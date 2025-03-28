@@ -1,5 +1,4 @@
 import { Hono } from "hono";
-import { getLoadContext } from "./context";
 
 const API_BASENAME = "/api";
 
