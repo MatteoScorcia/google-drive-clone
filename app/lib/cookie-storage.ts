@@ -1,4 +1,5 @@
 import { createCookieSessionStorage } from "react-router";
+import { SERVER_ENV } from "~/server/env";
 
 export const sessionStorage = createCookieSessionStorage({
   cookie: {
@@ -6,7 +7,7 @@ export const sessionStorage = createCookieSessionStorage({
     sameSite: "lax",
     path: "/",
     httpOnly: true,
-    secure: process.env.NODE_ENV === "production",
+    secure: SERVER_ENV.APP_ENV === "production",
   },
 });
 

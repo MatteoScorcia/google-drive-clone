@@ -6,8 +6,7 @@ import type { User } from "~/models/auth";
 import { sessionStorage } from "./cookie-storage";
 import { verify, hash, argon2id } from "argon2";
 import { v7 as uuidv7 } from "uuid";
-
-const ARGON2_SECRET = process.env.ARGON2_SECRET || "secret-key";
+import { SERVER_ENV } from "~/server/env";
 
 export const authenticator = new Authenticator<User>();
 authenticator.use(
@@ -25,7 +24,7 @@ authenticator.use(
       throw new Error("Failed to authenticate user");
 
     const isValidPassword = await verify(currentUser.hashedPassword, password, {
-      secret: Buffer.from(ARGON2_SECRET),
+      secret: Buffer.from(SERVER_ENV.ARGON2_SECRET),
     });
 
     if (!isValidPassword) throw new Error("Failed to authenticate user");
@@ -48,7 +47,7 @@ export async function createUser(form: FormData) {
     throw new Error("Invalid user data");
 
   const hashedPassword = await hash(password, {
-    secret: Buffer.from(ARGON2_SECRET),
+    secret: Buffer.from(SERVER_ENV.ARGON2_SECRET),
     type: argon2id,
     hashLength: 32,
     memoryCost: 2 ** 16,
