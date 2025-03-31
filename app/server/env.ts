@@ -3,7 +3,7 @@ import { type } from "arktype";
 const serverEnvSchema = type({
   APP_VERSION: "string.semver",
   APP_ENV: "('development' | 'staging' | 'production')",
-  "API_BASENAME?": "string",
+  API_BASENAME: "string",
   ARGON2_SECRET: "string",
   // DATABASE_URL: "string.url",
   // JWT_SECRET: "string > 32",
