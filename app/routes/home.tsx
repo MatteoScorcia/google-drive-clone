@@ -3,6 +3,7 @@ import { Button } from "~/components/ui/button";
 import { FileExplorer } from "~/components/file-explorer";
 import { authenticateRoute } from "~/lib/authentication";
 import { Form } from "react-router";
+import FileUpload from "~/components/file-upload";
 
 export function meta() {
   return [
@@ -29,11 +30,11 @@ export default function Home() {
           <div className="mb-4 flex items-center justify-between">
             <h1 className="text-2xl font-bold">My Drive</h1>
             <div className="flex items-center gap-2">
-              {/* <FileUpload /> */}
+              <FileUpload />
               <Button
                 variant="outline"
                 size="sm"
-                className="border-muted hover:bg-accent/50"
+                className="border-muted hover:bg-accent/50 cursor-pointer"
               >
                 New Folder
               </Button>
@@ -42,7 +43,7 @@ export default function Home() {
                   type="submit"
                   variant="outline"
                   size="sm"
-                  className="border-muted hover:bg-accent/50"
+                  className="border-muted hover:bg-accent/50 cursor-pointer"
                 >
                   Logout
                 </Button>

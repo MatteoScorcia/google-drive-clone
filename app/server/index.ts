@@ -11,9 +11,10 @@ const app = new Hono();
 // app.route(SERVER_ENV.API_BASENAME, api);
 app.route(SERVER_ENV.API_BASENAME, api);
 
+// @ts-expect-error broken typing for getLoadContext
 export default await createHonoServer({
   // Pass the root Hono app to the server.
   // It will be used to mount the React Router app on the `basename` defined in react-router.config.ts
-  app,
-  getLoadContext,
+  app: app,
+  getLoadContext: getLoadContext,
 });
